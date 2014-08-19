@@ -12,4 +12,9 @@ class HelloTest extends TestCase {
         $this->call('GET', '/');
         $this->assertResponseOk();
     }
+    
+    public function testHelloControllerExists ()
+    {
+        $this->action('GET', 'HelloController@sayhello');
+    }
 }
