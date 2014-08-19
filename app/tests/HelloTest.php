@@ -16,5 +16,13 @@ class HelloTest extends TestCase {
     public function testHelloControllerExists ()
     {
         $this->action('GET', 'HelloController@sayhello');
+        $this->assertResponseOk();
+        
+    }
+    
+    public function testControlofSayHello()
+    {
+        $response = $this->call('GET', '/');
+        $this->assertEquals('Hello Jahangir', $response->getContent());
     }
 }

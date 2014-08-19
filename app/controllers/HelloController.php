@@ -11,6 +11,10 @@
  *
  * @author jahangiralamdiu
  */
-class HelloController {
+class HelloController extends BaseController {
     //put your code here
+    public function sayhello()
+    {
+        return View::make('testview');
+    }
 }
