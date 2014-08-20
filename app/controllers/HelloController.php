@@ -15,6 +15,7 @@ class HelloController extends BaseController {
     //put your code here
     public function sayhello()
     {
-        return View::make('testview');
+        return View::make('testview', array('heading' => 'Hello Laravel',
+        'body' => 'This is totally awesome'));
     }
 }
